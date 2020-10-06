@@ -1,0 +1,96 @@
+
+Viewing Sow Details:(Get)
+
+Url--->http://localhost:8001/api/citi-portal/sow-details
+
+Adding Sow Details:(Post)
+
+Url--->http://localhost:8001/api/citi-portal/sow-details
+
+Updating  Sow Details:(Put)
+
+Url--->http://localhost:8001/api/citi-portal/sow-details
+
+Deleting Sow Details:(Delete)
+Url--->http://localhost:8001/api/citi-portal/sow-details
+
+Deleting Sow Details:(Deletebyid)
+Url--->http://localhost:8001/api/citi-portal/sow-details/301
+
+
+Viewing Sow Details baswd on sowid:(Get)
+Url--->http://localhost:8001/api/citi-portal/sow-details/sowid/301
+
+
+Viewing Sow Details baswd on status:(Get)
+Url--->http://localhost:8001/api/citi-portal/sow-details/status/y
+
+
+1.
+for adding sow details
+prev:
+@PostMapping("/addDetails")
+now:
+@PostMapping("/sow-details")
+
+
+2.
+for getting sow details
+prev:
+@GetMapping(path = "/getDetails", produces = "application/json")
+now:
+@GetMapping(path = "/sow-details", produces = "application/json")
+
+3.
+for updating details
+prev:
+@PutMapping("/updateDetails")
+
+now:
+@PutMapping("/sow-details")
+
+4:
+for deleting details
+prev:
+@DeleteMapping("/sowAllDelte")
+
+now:
+@DeleteMapping("/sow-details")
+
+5:
+for deleting data based on sowid
+prev:
+@DeleteMapping("/getDeleteByID/{sowId}")
+
+now:
+@DeleteMapping("/sow-details/{sowId}")
+
+
+6.
+for getting sow details based on sowid:
+prev:
+@GetMapping("/getDetailsByID/{sowId}")
+now:
+@GetMapping(value="/sow-details/sowid/{sowId}")
+
+7.
+for getting sow details based on sowid
+prev:
+@GetMapping("/getDetailsByStatus/{status}")
+now:
+@GetMapping(value= "/sow-details/status/{status}")
+
+
+
+Data:
+
+insert into sow_master values(101,"fg1","con1","conpred1","source data1",
+'2015-03-19','2015-04-19',"punearea",21,22,23,24,'2015-03-18',"y","citipm1",
+"citipm@email.com",
+"citiownername1","citiowner@gmail.com","n","contrctname1","createdby1",'2015-03-17',
+"punegeo",100,"modiby1",
+'2015-03-10',"remark1",'2015-03-19',"y",10,"virtusapm@gmaiil.com","virtusapm1",0);
+
+
+
+
